@@ -14,11 +14,7 @@
 
 // デフォルトのコメント部分は省略
 
-// index: showの補助ページ
-Route::get('messages', 'MessagesController@index')->name('messages.index');
-// create: 新規作成用のフォームページ
-Route::get('messages/create', 'MessagesController@create')->name('messages.create');
-// edit: 更新用のフォームページ
-Route::get('messages/{id}/edit', 'MessagesController@edit')->name('messages.edit');
+Route::get('/', 'MessagesController@index');
+Route::resource('messages', 'MessagesController');
 
 ?>
